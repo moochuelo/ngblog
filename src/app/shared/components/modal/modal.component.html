@@ -1,0 +1,4 @@
+<h2 matDialogTitle class="title">{{message.type}}</h2>
+<mat-dialog-content>
+   <app-new-post [userUid]="message.id" [buttonName]="message.buttonName" [userAdmin]="message.isAdmin" [resetFormControl]="message.resetForm"></app-new-post>
+</mat-dialog-content>

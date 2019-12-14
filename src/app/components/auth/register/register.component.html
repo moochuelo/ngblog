@@ -1,0 +1,29 @@
+<div class="register-wrap">
+   <div class="container">
+      <mat-card>
+         <div class="logo"><img width="40" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" /></div>
+         <mat-card-title>Registrate</mat-card-title>
+         <mat-card-content>
+            <form [formGroup]="registerForm" (ngSubmit)="onAddUser(registerForm.value)" fxLayout="column" fxLayoutAlign=”flex-center”>
+                  <mat-form-field fxFlex="1 0 0" class="form-control">
+                     <input type="text" matInput placeholder="Correo Electronico" formControlName="email">
+                  </mat-form-field>
+      
+                  <mat-form-field fxFlex="1 0 0" class="form-control">
+                     <input type="password" matInput placeholder="Contraseña" formControlName="password">
+                  </mat-form-field>
+      
+                  <p *ngIf="error" class="error" fxFlex="1 0 0">
+                     {{ error }}
+                  </p>
+      
+               <div class="button">
+                  <button type="submit" mat-button mat-raised-button color="primary">Registrarme</button>
+               </div>
+      
+            </form>
+         </mat-card-content>
+      </mat-card>
+      <p><a [routerLink]="['/home']"><mat-icon>keyboard_backspace</mat-icon>Regresar&nbsp;&nbsp;</a> <span>NgBlog © 2019</span></p>
+   </div>
+</div>

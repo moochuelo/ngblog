@@ -1,0 +1,45 @@
+<div class="new-post-container">
+   <p class="msg" *ngIf="userAdmin; else noAdmin">Tienes Permiso para todo los post</p>
+   <ng-template #noAdmin>
+      <p class="msg">Tus post no apareceran hasta que el admin los autorice</p>
+   </ng-template>
+
+   <form  [formGroup]="newPostFrom" (ngSubmit)="addNewPost(newPostFrom.value, newPostFrom.value.idControl)" fxLayout="column" fxLayoutAlign=”flex-center”>
+      <input type="hidden" name="userUid" formControlName="userUid">
+      <input type="hidden" name="statusPost" formControlName="statusPost">
+      <input type="hidden" name="id" formControlName="idControl" [(ngModel)]="this.postSvc.selectedPost.id">
+
+      <mat-form-field hintLabel="Max 100 characters" fxFlex="1 0 0" class="form-control">
+         <input matInput #title maxlength="100" placeholder="Titulo del Post" autocomplete="false" 
+            formControlName="titlePost" [(ngModel)]="this.postSvc.selectedPost.titlePost">
+         <mat-hint align="end">{{title.value?.length || 0}}/100</mat-hint>
+      </mat-form-field>
+      <mat-form-field hintLabel="Max 280 characters" fxFlex="1 0 0" class="form-control">
+         <textarea matInput #content maxlength="280" placeholder="Contenido del Post" autocomplete="false" 
+            formControlName="contentPost" rows="7" [(ngModel)]="this.postSvc.selectedPost.contentPost"></textarea>
+         <mat-hint align="end">{{content.value?.length || 0}}/280</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="1 0 0" class="form-control">
+         <mat-select placeholder="Tags" multiple formControlName="tagsPost" [(ngModel)]="this.postSvc.selectedPost.tagsPost">
+            <mat-option value="life">Life</mat-option>
+            <mat-option value="sport">Sport</mat-option>
+            <mat-option value="beauty">Beauty</mat-option>
+         </mat-select>
+      </mat-form-field>
+      <div class="container-input-file file-dummy form-control" fxFlex="1 0 0">
+          <label class="fileContainer">
+             <input type="file" formControlName="imagePost" (change)="handleImage($event)" />
+             <mat-icon>cloud_upload</mat-icon><span *ngIf="imageName; else nameButton">{{imageName}}</span>
+             
+             <ng-template #nameButton>
+                <span>Subir Imagen</span>
+             </ng-template>
+          </label>
+      </div>
+
+      <div class="container-button">
+         <button type="submit" mat-raised-button color="primary" [disabled]="!newPostFrom.valid" [mat-dialog-close]="true">{{buttonName}}</button>
+      </div>
+   </form>
+</div>

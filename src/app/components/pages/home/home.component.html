@@ -1,0 +1,62 @@
+   <figure class="banner"></figure>
+   <div class="container" fxLayout="column" fxLayoutAlign="center" *ngIf="posts$ | async as posts; else loading">
+         <div class="welcome">
+               <h1>Bienvenido a ngBlog</h1>
+               <p>Tu Plataforma de Angular + FireBase</p>
+         </div>
+         <ng-container *ngFor="let post of posts">
+            <mat-card class="post-card" *ngIf="post.statusPost == true">
+               <div class="post-header">
+                  <a class="product-link" [routerLink]="['/post', post.id]">
+                     <div class="title-wrap">
+                        <!-- <p>{{post.tagsPost | json}}</p> -->
+                        <h2>{{post.titlePost}}</h2>
+                     </div>
+                     <div class="image-wrap">
+                        <img matCardImage [src]="post.imagePost">
+                     </div>
+                  </a>
+               </div>
+            
+               <div class="post-info-wrapper">
+                  <mat-chip-list>
+                     <mat-chip *ngFor="let tag of post.tagsPost" [ngClass]="tag">
+                        {{tag}}
+                     </mat-chip>
+                  </mat-chip-list>
+                  <div class="content-wrap">
+                     <p>
+                        {{post.contentPost}}
+                     </p>
+                  </div>
+            
+                  <div class="footer-wrap" fxlayout="row" fxlayoutalign="space-between center"
+                     style="flex-direction: row; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center;">
+                     <span class="date">{{post.datePost}}</span>
+                     <button mat-icon-button matBadge="{{post.likesPost}}" (click)="likeUp(post)"
+                        *ngIf="authSvc.userData | async; else noUser">
+                        <mat-icon class="mat-icon-lg mat-icon material-icons notranslate mat-icon-no-color" svgIcon="thumb-up">
+                           thumb-up
+                        </mat-icon>
+                     </button>
+                     <ng-template #noUser>
+                        <button mat-icon-button (click)="openDialogLogin()">
+                           <mat-icon matBadge="{{post.likesPost}}"
+                              class="mat-icon-lg mat-icon material-icons notranslate mat-icon-no-color" svgIcon="thumb-up">
+                              thumb-up
+                           </mat-icon>
+                        </button>
+                     </ng-template>
+            
+                  </div>
+            
+               </div>
+            </mat-card>
+         </ng-container>
+   </div>
+
+<ng-template #loading>
+      <div class="spinner-wrap">
+         <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+      </div>
+</ng-template>

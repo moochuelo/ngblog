@@ -1,0 +1,137 @@
+main{
+   background: #fafafa;
+   padding: 64px 0 0 0 ;
+}
+
+.banner{
+   width: 100%;
+   height: 400px;
+   background: #f3f3f3;
+   position: absolute;
+   top: 0;
+}
+.container{
+   max-width: 600px;
+   padding: 50px 0;
+   .welcome{
+      text-align: center;
+      margin-bottom: 40px;
+      h1{
+         margin-bottom: 0;
+         letter-spacing: -0.5px;
+      }
+      position: relative;
+      z-index: 1;
+   }
+   .mat-card{
+   box-shadow: 2px 2px 6px 0 rgba(0,0,0,.1),0 1px 1px 0 transparent,0 1px 3px 0 rgba(0,0,0,.12)!important;
+   padding: 0;
+   font-family: 'open sans';
+   margin-bottom: 50px;
+      .post-header {
+         .title-wrap{
+            padding: 22px;
+            background: #fff;
+            h2{
+               font-weight: 600;
+               font-size: 26px;
+               letter-spacing: -2px;
+               line-height: 1.2;
+               margin-top: 5px;
+            }
+            p {
+               font-size: 14px;
+            }
+         }
+         .image-wrap{
+            // max-height: 260px;
+            overflow: hidden;
+            background: #f5f5f5;
+            img{
+            margin: 0 -16px 0px -16px;
+            }
+         }
+      }
+      .post-info-wrapper {
+
+         padding: 24px;
+         .mat-standard-chip {
+            margin: 0 2.5px 18px;
+            padding: 5px 15px;
+            min-height: 24px;
+         }
+         .mat-standard-chip.sport {
+            background: #fa456d;
+            color: #fff;
+         }
+         .mat-standard-chip.Life {
+            background: #df8399;
+            color: #fff;
+         }
+         .mat-standard-chip.ford {
+            background: #e7063b;
+            color: #fff;
+         }
+         .content-wrap{
+            margin-bottom: 20px;
+            p{
+               font-size: 16px;
+               line-height: 1.4;
+               text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+               text-rendering: optimizeLegibility !important;
+               -webkit-font-smoothing: antialiased !important;
+            }
+         }
+
+         .footer-wrap{
+            .date{
+               display: block;
+               font-weight: 300;
+               color: #c5c5c5;
+               span{
+                  font-size: 14px;
+               }
+            }
+
+            button{
+               cursor: pointer;
+               border: none;
+               outline: none;
+               background: #f0f0f0;
+               min-width: inherit;
+               line-height: inherit;
+               padding: inherit;
+               border-radius: 50px;
+               .mat-icon {
+                  fill: #9a9a9a;
+                  cursor: pointer;
+                  transition: 0.3s;
+                  width: 38px;
+                  height: 38px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  outline: none;
+                  padding: 10px;
+                  line-height: inherit;
+                  margin: auto;
+               }
+               .mat-badge-content {
+                  right: -7px;
+                  top: -2px;
+               }
+            }
+         }
+      }
+   }
+   .publish-editor-wrap{
+      margin-bottom: 30px;
+      .form-group{
+         flex-flow: row wrap;
+         box-sizing: border-box;
+         display: flex;
+         place-content: stretch flex-start;
+         align-items: stretch;
+      }
+   }
+}

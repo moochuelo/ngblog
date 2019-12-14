@@ -1,0 +1,32 @@
+      .mat-card{
+        padding: 25px 13px 0;
+        min-width: 330px;
+        box-shadow: none;
+      }
+      .form-control{
+         margin-bottom: 15px;
+      }
+      button{
+         width: 100%;
+         font-size: 18px;
+         padding: 8px 0;
+      }
+      p{
+         text-align: center;
+         margin-top: 15px;
+                     display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+         a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e91e63;
+         }
+      }
+
+      .error {
+        padding: 16px;
+        color: red;
+      }

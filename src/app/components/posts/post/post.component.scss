@@ -1,0 +1,145 @@
+.app{
+   background: #fff;
+}
+.post-single-card{
+   
+   .post-header{
+      .title-wrap{
+         margin-bottom: 35px;
+         h2{
+            font-weight: 600;
+            font-size: 33px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-top: 5px;
+            color: #000;
+         }
+         p {
+            font-size: 14px;
+         }
+      .mat-standard-chip {
+         margin: 18px 2.5px 0;
+         padding: 5px 15px;
+         min-height: 24px;
+      }
+      .mat-standard-chip.sport {
+         background: #fa456d;
+         color: #fff;
+      }
+      .mat-standard-chip.Life {
+         background: #df8399;
+         color: #fff;
+      }
+      .mat-standard-chip.ford {
+         background: #e7063b;
+         color: #fff;
+      }
+
+      }
+      .image-wrap{
+         img{
+            width: calc(100% + 32px);
+            margin: 0 -16px 16px -16px;
+         }
+      }
+   }
+   .post-info-wrapper{
+      .post-info-header{
+         margin-bottom: 25px;
+         .date{
+            display: block;
+            font-weight: 300;
+            color: #c5c5c5;
+            span{
+               font-size: 14px;
+            }
+         }
+         button{
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: #f0f0f0;
+            min-width: inherit;
+            line-height: inherit;
+            padding: inherit;
+            border-radius: 50px;
+            .mat-icon {
+               fill: #9a9a9a;
+               cursor: pointer;
+               transition: 0.3s;
+               width: 38px;
+               height: 38px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               outline: none;
+               padding: 10px;
+               line-height: inherit;
+               margin: auto;
+            }
+         }
+      }
+      .content-wrap{
+          margin-bottom: 20px;
+         p{
+            line-height: 1.8;
+            color: #4b4b4b;
+            font-size: 21px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+            text-rendering: optimizeLegibility !important;
+            -webkit-font-smoothing: antialiased !important;
+            letter-spacing: -0.5px;
+         }
+      }
+   }
+}
+.post-comments{
+   background: #fafafa;
+   min-height: 300px;
+   .container{
+      padding: 0;
+      .heading{
+         padding: 20px;
+         h5{
+            font-size: 16px;
+            color: rgba(0,0,0,.68);
+            font-weight: 600;
+         }
+      }
+      .responses-editor{
+         margin-top: 5px;
+         padding: 25px 35px;
+         -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.03);
+         box-shadow: 0 1px 4px rgba(0,0,0,.03);
+         border: 1px solid rgba(0,0,0,.09);
+         background: #fff;
+         .inline-editor{
+            cursor: text;
+            .avatar{
+               .avatar-image {
+                  display: inline-block;
+                  vertical-align: middle;
+                  -webkit-border-radius: 100%;
+                  border-radius: 100%;
+                  width: 36px;
+                  height: 36px;
+               }
+            }
+            .editor{
+               
+            }
+         }
+         button{
+            margin-top: 30px;
+         }
+      }
+
+      .mat-list {
+         padding-top: 28px;
+         padding-bottom: 28px;
+         .mat-icon {
+            color: #d1d1d1;
+         }
+      }
+   }
+}

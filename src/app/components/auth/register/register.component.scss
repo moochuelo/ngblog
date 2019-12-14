@@ -1,0 +1,39 @@
+.register-wrap{
+   background: #fafafa;
+   height: 100vh;
+   .container{
+      max-width: 680px;
+      padding: 50px 30px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      height: 100vh;
+      .mat-card{
+         padding: 35px;
+         min-width: 330px;
+      }
+      .form-control{
+         margin-bottom: 15px;
+      }
+      button{
+         width: 100%;
+         font-size: 18px;
+         padding: 8px 0;
+      }
+      p{
+         text-align: center;
+         margin-top: 11px;
+                     display: flex;
+            justify-content: center;
+            align-items: center;
+         a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e91e63;
+         }
+      }
+   }
+}
