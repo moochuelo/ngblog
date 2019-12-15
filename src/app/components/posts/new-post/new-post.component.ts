@@ -14,7 +14,7 @@ export class NewPostComponent implements OnInit {
   public status:boolean;
   public imageName:string;
   
-  constructor(private postSvc: PostService, public dialogRef: MatDialogRef<NewPostComponent>) { }
+  constructor(public postSvc: PostService, public dialogRef: MatDialogRef<NewPostComponent>) { }
 
   @Input() userUid: string;
   @Input() userAdmin: string;

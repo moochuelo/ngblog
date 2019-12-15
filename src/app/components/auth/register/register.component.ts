@@ -22,12 +22,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
 
   }
-  // onAddUser(){
-  //   this.authService.registerUser(user)
-  //   .then( (res) => {
-  //     this.router.navigate(['/home']);
-  //   }).catch(err => console.log('err', err.message));
-  // }
 
   onAddUser(formRegister: UserI) {
     this.authService.registerUser(formRegister)

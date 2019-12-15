@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
+import { LoginComponent } from 'src/app/components/auth/login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,10 @@ import { MatIconRegistry } from '@angular/material/icon';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  @Input() loginComponent: LoginComponent;
+
+
   title = 'ngBlog';
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {

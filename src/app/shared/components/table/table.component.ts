@@ -20,7 +20,7 @@ export class TableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator, {static:true}) paginator:MatPaginator;
   @ViewChild(MatSort, {static:true}) sort:MatSort;
 
-  constructor(private postSvc: PostService, public dialog: MatDialog, private authService: AuthService) { }
+  constructor(public postSvc: PostService, public dialog: MatDialog, private authService: AuthService) { }
 
   public isAdmin: any = null;
   public userUid: any = null;

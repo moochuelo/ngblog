@@ -33,9 +33,7 @@ const routes: Routes = [
   },
   { path: 'registro', loadChildren: () => import('./components/auth/register/register.module').then(m => m.RegisterModule), },
 
-  // { path: 'login', loadChildren: () => import('./components/auth/login/login.module').then(m => m.LoginModule) }
-  // { path: '404', component: NotFoundComponent },
-  // { path: '**', redirectTo: '/home' },
+  { path: '**', redirectTo: '/home' },
 ];
 
 @NgModule({

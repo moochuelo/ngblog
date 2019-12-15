@@ -26,6 +26,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
 
 import { DatePipe } from '@angular/common';
+import { LoginModule } from './components/auth/login/login.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { DatePipe } from '@angular/common';
     PostComponent,
     HeaderComponent,
     ContainerAppComponent,
-    LoginComponent,
+    // LoginComponent,
     ModalComponent,
   ],
   imports: [
@@ -50,6 +51,8 @@ import { DatePipe } from '@angular/common';
     FlexLayoutModule,
     AngularFireAuthModule,
     ReactiveFormsModule,
+    LoginModule,
+
   ],
   providers: [
     { provide: StorageBucket, useValue: 'gs://ngblog-59778.appspot.com'},

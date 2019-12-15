@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AuthService } from '../../../shared/services/auth.service';
 import { MatDialog } from '@angular/material/dialog';
-import { LoginComponent } from 'src/app/components/auth/login/login.component';
+import { LoginComponent } from '../../auth/login/login.component';
 
 @Component({
   selector: 'app-post',
@@ -19,7 +19,6 @@ import { LoginComponent } from 'src/app/components/auth/login/login.component';
 
 
 export class PostComponent implements OnInit{
-
 
   public post$:Observable<PostI>;
   public post:any;

@@ -12,6 +12,7 @@ import { MatDialogRef, MAT_DIALOG_DATA, } from '@angular/material';
 })
 export class LoginComponent implements OnInit {
 
+ 
 
   public errorMessage:string;
 
@@ -31,8 +32,6 @@ export class LoginComponent implements OnInit {
     this.authSvc.loginByEmail(form)
       .then(res => {
         this.dialogRef.close();
-        // console.log('Successfully', res);
-        // this.route.navigate(['/home']);
       })
       .catch(error => this.errorMessage = error.message);
   }
