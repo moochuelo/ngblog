@@ -149,11 +149,11 @@ Hay 2 Roles de usuarios:
 | ---------------------------------------|:-----------:|:-----------:|
 | Crear nuevos post                      | ✓           | ✓           |
 | Editar post                            | ✓           | ✓           |
-| Eliminar post                          | ✓           | ×           |
+| Eliminar post                          | ✓           | ✓           |
 | Enviar post para aprobacion            | ×           | ✓           |
 | Editar post de otro usuarios           | ✓           | ×           |
 | Eliminar post de otros usuarios        | ✓           | ×           |
-| Estados de post de otros usuarios      | ✓           | ✓           |
+| Estados de post de otros usuarios      | ✓           | ×           |
 | Enviar Comentarios                     | ✓           | ✓           |
 | Puntuar post                           | ✓           | ✓           |
 
