@@ -1,6 +1,6 @@
 # NgBlog
 
-NgBlog es un pequeño pero robusto blogs construido con Angular 8, Firebase, Angular Material, Cree, modere y administre publicaciones de blog y más con esta aplicación web.
+NgBlog es un pequeño pero robusto blogs construido con Angular 8, Firebase, Angular Material, Crear, Moderar y Aministrar publicaciones de blog y más con esta aplicación web.
 
 ## Especificaciones
 
