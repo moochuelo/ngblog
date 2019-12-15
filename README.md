@@ -141,20 +141,20 @@ Ejecute `npm run deploy` para implementar su proyecto. Este comando primero comp
 
 ## Admin Roles
 
-There are 2 Admin Roles:
+Hay 2 Roles de usuarios:
 * admin
 * editor
 
-| Permission                             | admin       | editor      |
+| Permisos                               | admin       | editor      |
 | ---------------------------------------|:-----------:|:-----------:|
 | Crear nuevos post                      | ✓           | ✓           |
 | Editar post                            | ✓           | ✓           |
 | Eliminar post                          | ✓           | ×           |
 | Enviar post para aprobacion            | ×           | ✓           |
 | Editar post de otro usuarios           | ✓           | ×           |
-x| Eliminar post de otros usuarios       | ✓           | ×           |
-x| Estados de post de otros usuarios     | ✓           | ✓           |
-x| Enviar Comentarios                    | ✓           | ✓           |
-x| Puntuar post                          | ✓           | ✓           |
+| Eliminar post de otros usuarios        | ✓           | ×           |
+| Estados de post de otros usuarios      | ✓           | ✓           |
+| Enviar Comentarios                     | ✓           | ✓           |
+| Puntuar post                           | ✓           | ✓           |
 
 
