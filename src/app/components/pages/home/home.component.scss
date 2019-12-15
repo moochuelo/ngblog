@@ -133,3 +133,11 @@ main{
       }
    }
 }
+
+      @media screen and (max-width: 660px) {
+      .welcome{
+         h1{
+            font-size: 8vw;
+         }
+      }
+   }

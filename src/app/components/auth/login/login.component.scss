@@ -30,3 +30,10 @@
         padding: 16px;
         color: red;
       }
+
+      @media screen and (max-width: 660px) {
+         .mat-card{
+            padding: 25px 13px 0;
+            min-width: 100%;
+         }
+   }

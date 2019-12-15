@@ -97,4 +97,9 @@
   }
 
 
-  
+        @media screen and (max-width: 660px) {
+         .new-post-container{
+            padding: 25px 13px 0;
+            min-width: 100%;
+         }
+   }
