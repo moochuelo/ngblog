@@ -52,7 +52,7 @@ import { DatePipe } from '@angular/common';
     ReactiveFormsModule,
   ],
   providers: [
-    { provide: StorageBucket, useValue: 'gs://ngblog-d1114.appspot.com'},
+    { provide: StorageBucket, useValue: 'gs://ngblog-59778.appspot.com'},
     DatePipe
   ],
   bootstrap: [AppComponent],

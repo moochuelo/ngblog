@@ -43,26 +43,82 @@ p{
     }
 }
 
+td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type {
+    padding-right: 24px;
+    border: none;
+}
+
+mat-cell{
+    padding: 18px 24px;
+}
+
 
 .mat-icon-button .mat-icon, .mat-icon-button i {
     display: flex;
     margin: auto;
 }
 
-td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type {
-    text-align: right;
-    padding: 15px 25px 15px 0;
-}
-table{
-  button{
-    margin: 3px;
+@media screen and (max-width: 660px) {
+  .mat-table {
+    border: 0;
+    vertical-align: middle
   }
-}
 
-td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+  .mat-table caption {
+    font-size: 1em;
+  }
+  
+  /*  Enable this to hide header
+  .mat-table .mat-header-cell {
+    
+    border: 10px solid;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
     padding: 0;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    max-width: 228px;
-    padding-right: 15px;
+    position: absolute;
+    width: 1px;
+  }
+  */
+  .mat-table .mat-row {
+    border-bottom: 5px solid #ddd;
+    display: block;
+  }
+  /*
+  .mat-table .mat-row:nth-child(even) {background: #CCC}
+  .mat-table .mat-row:nth-child(odd) {background: #FFF}
+  */
+  .mat-table .mat-cell {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+  }
+  .mat-table .mat-cell:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: left;
+    font-size: .85em;
+  }
+
+  .mat-row{
+    display: none;
+}
+  .mat-table .mat-cell:last-child {
+    border-bottom: 0;
+  }
+    .mat-table .mat-cell:first-child {
+    margin-top: 4%;
+  }
 }
