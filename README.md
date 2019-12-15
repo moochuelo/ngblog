@@ -1,6 +1,6 @@
 # NgBlog
 
-NgBlog es un pequeño pero robusto blogs construido con Angular 8, Firebase, Angular Material, Crear, Moderar y Aministrar publicaciones de blog y más con esta aplicación web.
+NgBlog es un pequeño pero robusto blogs construido con Angular 8, Firebase, Angular Material, Crear, Moderar y Administrar publicaciones de blog y más, con esta aplicación web.
 
 ## Especificaciones
 
@@ -16,7 +16,7 @@ NgBlog es un pequeño pero robusto blogs construido con Angular 8, Firebase, Ang
 * Eche un vistazo a la aplicación de front-end: https://ngblog-59778.web.app/home
 * Detalles de inicio de sesión como Admin: admin@admin.com / andreake007
 * Usted puede registrarse libremente, se le asignara un role de editor.
-* Como editor solo puede Publicar, Editar y Eliminar tus Post, Tus post se publicaran solo cuando el admin los autorize.
+* Como editor solo puede Publicar, Editar y Eliminar tus Post, Tus post se publicaran solo cuando el admin los autorice.
 
 
 ## Instalacion
@@ -101,11 +101,11 @@ Navegue a `http://localhost:4200/login` para acceder a la página de inicio de s
 Navegue a `http://localhost:4200/registro` para acceder a la página de registro de usuarios.
 
 
-## Create Admin Account
+## Crear Cuenta de Admon
 
 Deberá agregar manualmente su primera cuenta de administrador.
 
-1) Abrar src/app/shared/services/auth.service.ts linea 47 y cambien el role editor por admin:
+1) Abrar src/app/shared/services/auth.service.ts linea 47 y cambien el rol editor por admin:
 
 ```javascript
    roles: {
@@ -119,7 +119,7 @@ Deberá agregar manualmente su primera cuenta de administrador.
 input.email="Correo Electronico" input.password="Contraseña"
 ```
 
-3) Vuelva abrir src/app/shared/services/auth.service.ts y cambie el role admin por editor para futuros registros de usuarios
+3) Vuelva abrir src/app/shared/services/auth.service.ts y cambie el rol admin por editor para futuros registros de usuarios
 
 ```javascript
    roles: {
