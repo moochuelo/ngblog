@@ -157,6 +157,11 @@ export class PostService {
       email: userData.email,
       comment: comment
     }
+
+    console.log(ref);
+    console.log(commetColection);
+    
+
     return commetColection.set(data).then(function (ref) {
       console.log('document added to items collection: ', ref);
     })

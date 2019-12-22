@@ -2,9 +2,13 @@ import { Injectable } from '@angular/core';
 import { UserI } from '../models/user.interface';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
+
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +18,13 @@ export class AuthService {
 
 
   public userData:Observable<firebase.User>;
+  public userRoute:any;
 
-  constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore) {
+  constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore, public route: Router) {
     this.userData = afAuth.authState;
   }
+
+  
 
   registerUser(user: UserI){
     const {email, password, name} = user;
@@ -36,7 +43,11 @@ export class AuthService {
   }
 
   logout(){
-    this.afAuth.auth.signOut();
+    return this.afAuth.auth.signOut().then(() => {
+      this.route.navigate(['home']);
+    }).catch(function (error) {
+      console.log('no salior', error);
+    });
   }
 
   private updateUserData(user){
